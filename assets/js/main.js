@@ -36,6 +36,7 @@ var noResultsTemplate = Hogan.compile($('#no-results-template').text());
 $searchInput
 .on('keyup', function() {
   var query = $(this).val();
+  PARAMS.hitsPerPage = 3;
   algoliaHelper.setQueryParameter('aroundLatLngViaIP', true)
   algoliaHelper.setQuery(query).search();
 })
@@ -103,4 +104,14 @@ function renderHitStars() {
 $(document).on('click', '.toggle-refine', function(e) {
   e.preventDefault();
   algoliaHelper.toggleRefine($(this).data('facet'), $(this).data('value')).search();
+});
+
+$('#show-more').click(function (){
+
+})
+
+
+$(document).on('click', '#show-more', function(e) {
+  PARAMS.hitsPerPage += 3
+  algoliaHelper.setQueryParameter('hitsPerPage', PARAMS.hitsPerPage).search();
 });
