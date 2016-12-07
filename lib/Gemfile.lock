@@ -1,0 +1,18 @@
+GEM
+  specs:
+    algoliasearch (1.12.1)
+      httpclient (~> 2.8.2.4)
+      json (>= 1.5.1)
+    dotenv (2.1.1)
+    httpclient (2.8.2.4)
+    json (1.8.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  algoliasearch
+  dotenv
+
+BUNDLED WITH
+   1.13.6
