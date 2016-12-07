@@ -32,6 +32,9 @@ var facetTemplate = Hogan.compile($('#facet-template').text());
 var sliderTemplate = Hogan.compile($('#slider-template').text());
 var noResultsTemplate = Hogan.compile($('#no-results-template').text());
 
+$(document).ready(function (){
+  algoliaHelper.setQuery('').search();
+});
 
 $searchInput
 .on('keyup', function() {
@@ -105,11 +108,6 @@ $(document).on('click', '.toggle-refine', function(e) {
   e.preventDefault();
   algoliaHelper.toggleRefine($(this).data('facet'), $(this).data('value')).search();
 });
-
-$('#show-more').click(function (){
-
-})
-
 
 $(document).on('click', '#show-more', function(e) {
   PARAMS.hitsPerPage += 3
