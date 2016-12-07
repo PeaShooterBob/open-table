@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Restaurant Locator - by Algolia</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  </head>
+  <body>
+
+  <div class="welcome-container">
+    <header>
+      <div class="header-container">
+        <input type="text" id="search-input" placeholder="Search for Restaurants by Name, Cuisine, Location">
+      </div>
+    </header>
+
+    <main>
+      <div id="left-column">
+        <div id="left-column-content">
+          <div id="facets"></div>
+        </div>
+      </div>
+
+      <div id="right-column">
+        <div id="right-column-content">
+          <div id="stats"></div>
+          <div id="hits"></div>
+          <div id="show-more">
+            <div>
+              Show More
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script type="text/template" id="hit-template">
+      {{#hits}}
+      <div class="hit">
+        <div class="hit-image">
+          <img src="{{image_url}}" alt="{{name}}"/>
+        </div>
+        <div class="hit-content">
+          <h2 class="hit-name">{{{name}}}</h2>
+          <div class="review">
+            <div class="hit-stars-count">
+              {{stars_count}}
+            </div>
+            <div class="hit-stars">
+              {{stars}}
+            </div>
+            <div class="hit-reviews-count">({{reviews_count}} reviews)</div>
+          </div>
+          <div class="hit-food-type">{{food_type}} | {{neighborhood}} | {{price_range}}</div>
+        </div>
+      </div>
+      {{/hits}}
+    </script>
+
+    <script type="text/template" id="stats-template">
+      {{ nbHits }} Result{{#nbHits_plural}}s{{/nbHits_plural}} <span class="found-in">Found in {{ processingTimeMS }}ms</span>
+    </script>
+
+    <script type="text/template" id="facet-template">
+      <h5>{{title}}</h5>
+      {{#values}}
+        <div class="facet">
+          <a href="" class="facet-link toggle-refine {{#disjunctive}}facet-disjunctive{{/disjunctive}} {{#isRefined}}facet-refined{{/isRefined}}" data-facet="{{ facet }}" data-value="{{ name }}">
+            {{ name }}<span class="facet-count">{{ count }}</span>
+          </a>
+        </div>
+      {{/values}}
+    </script>
+
+<script type="text/html" id="no-results-template">
+  <div id="no-results-message">
+    <p>We didn&rsquo;t find any results for the search <em>&ldquo;{{query}}&rdquo;</em></p>
+    <a href="#" class="clear-all">Clear all</a>
+  </div>
+</script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.js"></script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch.helper/2/algoliasearch.helper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.common.js"></script>
+  <script src="assets/js/main.js"></script>
+  </body>
+</html>

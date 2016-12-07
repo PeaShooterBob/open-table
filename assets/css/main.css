@@ -1,0 +1,189 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  margin: 0px;
+  color: black;
+}
+
+a {
+  color:black;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #1C688E;
+}
+
+#search-input {
+  width: 93%;
+  height: 48px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+main {
+  width: 100%;
+}
+
+#left-column {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 25%;
+  float: left;
+  border-right: 1px #E6E6E6 solid;
+  font-weight: 500;
+}
+
+#left-column-content {
+  width: 70%;
+  margin-top: 4%;
+}
+
+#facets > h5 {
+  font-size: 1.15em;
+  font-style: bold;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#facets img {
+  width: 20px;
+  height: 20px;
+}
+
+#facets {
+  margin-left: 5%;
+}
+
+.facet a {
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding: 4px;
+  margin-top: 2%;
+  border-radius: 5px;
+}
+
+.facet a:hover {
+  background-color: #2897C5;
+  border-radius: 5px;
+  color: white;
+}
+
+a[data-facet="stars"]:hover {
+  background-color: snow;
+  border-radius: 5px;
+}
+
+.facet a:hover span{
+  color: white;
+}
+
+.facet-count {
+  margin-left: auto;
+  color: #707070;
+}
+
+.facet-refined {
+  background-color: #2897C5;
+  border-radius: 5px;
+  color: white;
+}
+
+.facet-refined[data-facet="stars"] {
+  background-color: snow;
+  border-radius: 5px;
+}
+
+.facet-refined span {
+  color: white;
+}
+
+#stats{
+  border-bottom: 1px solid gray;
+}
+
+#right-column {
+  display: flex;
+  justify-content: center;
+  height:100%;
+  width: 73%;
+}
+
+#right-column-content {
+  width: 90%;
+  margin-top: 2%;
+}
+
+.hit {
+  display: flex;
+  width: 100%;
+  margin-top: 2%;
+  color: #707070;
+}
+
+.hit-image {
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hit-image img{
+  width: 100%;
+  height: auto;
+}
+
+.hit-content {
+  margin-left: 3%;
+}
+
+.review {
+  display: flex;
+  margin-top: 10px;
+}
+
+.hit-stars-count {
+  color: #FBAE00;
+  align-self: flex-end;
+}
+
+.hit-stars {
+  margin-left: 10px;
+}
+
+.hit-reviews-count {
+  align-self: flex-end;
+  margin-left: 15px;
+}
+
+.ais-star-rating--count {
+  display: none;
+}
+
+.hit-food-type {
+  margin-top: 7px;
+}
+
+#show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+#show-more > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 50px;
+  color: #707070;
+  border: 1px #E6E6E6 solid;
+}
