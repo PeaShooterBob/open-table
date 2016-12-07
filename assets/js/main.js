@@ -9,7 +9,7 @@ var PARAMS = {
   index: INDEX_NAME
 };
 
-var FACETS_LABELS = {food_type: 'Food Type', stars: 'Stars', payment_options: 'Payment Options'};
+var FACETS_LABELS = {food_type: 'Cuisine/Food Type', stars: 'Rating', payment_options: 'Payment Options'};
 var FACETS_ORDER_OF_DISPLAY = ['food_type', 'stars', 'payment_options'];
 var FACETS_SORTING_RULES = {
   'food_type' : ['count:desc'],

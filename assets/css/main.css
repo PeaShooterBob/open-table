@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 h2 {
@@ -25,6 +26,7 @@ a {
   height: 48px;
   font-size: 1.2em;
   border-radius: 5px;
+  padding: 0px 10px;
 }
 
 main {
@@ -47,9 +49,9 @@ main {
 }
 
 #facets > h5 {
-  font-size: 1.15em;
+  font-size: 14px;
   font-style: bold;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 
@@ -60,14 +62,18 @@ main {
 
 #facets {
   margin-left: 5%;
+  font-size: 13px;
+}
+
+.facet {
+  margin-left: 2%;
 }
 
 .facet a {
   display: flex;
   justify-content: flex-start;
   text-decoration: none;
-  padding: 4px;
-  margin-top: 2%;
+  padding: 2px 4px;
   border-radius: 5px;
 }
 
@@ -88,7 +94,7 @@ a[data-facet="stars"]:hover {
 
 .facet-count {
   margin-left: auto;
-  color: #707070;
+  color: #B6B6B6;
 }
 
 .facet-refined {
@@ -104,10 +110,6 @@ a[data-facet="stars"]:hover {
 
 .facet-refined span {
   color: white;
-}
-
-#stats{
-  border-bottom: 1px solid gray;
 }
 
 #right-column {
@@ -126,12 +128,17 @@ a[data-facet="stars"]:hover {
   display: flex;
   width: 100%;
   margin-top: 2%;
-  color: #707070;
+  color: #B6B6B6;
+  font-size: 14px;
+}
+
+.hit-name {
+  font-size: 16px;
 }
 
 .hit-image {
-  width: 125px;
-  height: 125px;
+  width: 80px;
+  height: 80px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -184,6 +191,6 @@ a[data-facet="stars"]:hover {
   justify-content: center;
   width: 250px;
   height: 50px;
-  color: #707070;
+  color: #B6B6B6;
   border: 1px #E6E6E6 solid;
 }
